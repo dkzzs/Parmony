@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+{% block title %}Transactions{% endblock %}
+
+{% block page_content %}
+<table class="table">
+    <thead><tr><th>In</th><th>Out</th><th>Parker Type</th><th>LOS</th><th>Payment</th></tr></thead>
+    {% for transaction in transactions %}
+    <tr>
+        <td>{{ transaction.entry_timestamp }}</td>
+        <td>{{ transaction.exit_timestamp }}</td>
+        <td>{{ transaction.parker_type }}</td>
+        <td>{{ transaction.length_of_stay }}</td>
+        <td>{{ transaction.net_price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.transactions',code=carpark.code) }}
+</div>
+{% endif %}
+
+{% endblock %}

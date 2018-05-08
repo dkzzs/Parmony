@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}TEST{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Test</h1>
+</div>
+<div>
+
+</div>
+<img src="{{ url_for('plot.test_plot') }}" alt="loading..."/>
+{% endblock %}

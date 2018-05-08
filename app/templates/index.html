@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block title %}Parmony - Home{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Harmony Carparks</h1>
+</div>
+<table class="table">
+    <thead><tr><th>Code</th><th>Name</th><th>Space</th><th>Demand</th></tr></thead>
+    {% for carpark in carparks %}
+    <tr>
+        <td>
+            <a href="{{ url_for('.carpark', code=carpark.code) }}">{{ carpark.code }}</a>
+        </td>
+        <td>{{ carpark.name }}</td>
+        <td>{{ carpark.num_of_space }}</td>
+        <td>{{ carpark.demand }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+{% endif %}
+
+{% endblock %}

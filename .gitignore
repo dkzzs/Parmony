@@ -1,0 +1,6 @@
+/tmp/
+*.sqlite
+/venv/
+/__pycache__/
+/.idea/
+/docs/
