@@ -1,7 +1,5 @@
 # Parmony
 
-A web application for Harmony carpark data analysis
+A web application for Harmony carpark data analysis  
 
-Author: DK
-
-
+Author: Michael Q, Dengke X
