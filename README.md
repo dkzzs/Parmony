@@ -1,2 +1,4 @@
 # Parmony
-A web application for Harmony carpark data analysis  -Michael
+A web application for Harmony carpark data analysis  
+
+Author: Michael Qian
