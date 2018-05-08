@@ -23,6 +23,6 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     from .plot import plot as plot_blueprint
-    app.register_blueprint(plot_blueprint)
+    app.register_blueprint(plot_blueprint, url_prefix='/plot')
 
     return app
